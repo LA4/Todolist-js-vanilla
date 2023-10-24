@@ -6,11 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TodoList vanilla JS</title>
     <link rel="stylesheet" href="./css/main.css">
-    <script defer src="./js/router.js" type="module"></script>
+    <script defer src="./js/route.js" type="module"></script>
 </head>
 
 <body>
-    <div id="app"></div>
+    <div class="container">
+        <span>
+            <h1>Todolist</h1>
+        </span>
+        <div class="main">
+            <input type="text">
+            <button class="button"> Ok </button>
+        </div>
+        <main class="list-of-elements">
+            <ul>
+                <li> elements <button class="button"><i class="fa-delete"></i></button> </li>
+            </ul>
+        </main>
+    </div>
 </body>
 
 </html>
