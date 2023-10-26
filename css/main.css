@@ -3,6 +3,7 @@
 h1,h2,h3,h4,h5,h6{margin: 0;padding: 0;}
 a{text-decoration: none;color: inherit;}
 ul,li,ol{list-style: none;}
+button{text-align:center;padding: .2rem;border-radius: 50%;cursor: pointer; }
 /* end rest */
 body{color: rgba(0, 0, 0, .8);font-family: sans-serif;}
 .container{
@@ -12,6 +13,15 @@ body{color: rgba(0, 0, 0, .8);font-family: sans-serif;}
     align-items: center;
     margin:auto ;
     width: 400px;
-    background-color: rgba(0, 0, 0, .5);
-
+    background-color: rgba(82, 124, 155, 0.2);
+} 
+.task-li{
+    display: flex;
+    gap: .5rem;
+}
+.fa-delete{
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color:red ;
 }
