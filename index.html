@@ -15,8 +15,15 @@
             <h1>Todolist</h1>
         </span>
         <div class="main">
-            <input type="text" id="input-todo">
-            <button class="button"> Ok </button>
+            <form action="" id="form-todo">
+                <input type="text" id="input-todo" name="todoElement">
+                <button class="button-todo">Valider</button>
+            </form>
+        </div>
+        <div class="todos-gest">
+            <span class="todos-gest-items delete-task">Supprimer toutes les tâches</span>
+            <span class="todos-gest-items delete-task-uncheked">Supprimer les tâches non effectuées</span>
+            <span class="todos-gest-items delete-task-cheked">Supprimer les tâches effectuées</span>
         </div>
         <main class="list-of-elements">
             <ul id="container-list">

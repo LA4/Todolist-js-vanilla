@@ -3,7 +3,7 @@
 h1,h2,h3,h4,h5,h6{margin: 0;padding: 0;}
 a{text-decoration: none;color: inherit;}
 ul,li,ol{list-style: none;}
-button{text-align:center;padding: .2rem;border-radius: 50%;cursor: pointer; }
+button{text-align:center;padding: .2rem;border-radius: 8px;cursor: pointer; }
 /* end rest */
 body{color: rgba(0, 0, 0, .8);font-family: sans-serif;}
 .container{
@@ -18,10 +18,29 @@ body{color: rgba(0, 0, 0, .8);font-family: sans-serif;}
 .task-li{
     display: flex;
     gap: .5rem;
+    transition: .8s;
 }
 .fa-delete{
     display: block;
     width: 15px;
     height: 15px;
     background-color:red ;
+}
+.todos-gest{
+    display: flex;
+    gap: .2rem;
+    padding: .2rem;
+}
+.todos-gest-items {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: .2rem;
+    font-size: .8rem;
+    border: 1px solid rgba(82, 124, 155, 0.2);
+border-radius: .2rem;
+    cursor: pointer;
+}
+.checked{
+    text-decoration:line-through;
 }

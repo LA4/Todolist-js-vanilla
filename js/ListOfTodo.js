@@ -5,10 +5,10 @@ import { CreateElements } from "./componnents/CreateElements.js";
  */
 
 export class ListOfTodo {
-  /**
-   * @param {String?} #todo
-   */
+  /** @param {String?} #todo*/
   #todo;
+  /** @param {HTMLElement}   */
+  #task;
   constructor(todo) {
     this.#todo = todo;
     const containerList = document.querySelector("#container-list");
@@ -18,16 +18,25 @@ export class ListOfTodo {
     const task = CreateElements("li", {
       class: "task-li",
     });
+    this.#task = task;
+    const checkbox = CreateElements("input", {
+      type: "checkbox",
+    });
     if (this.#todo) {
-      task.innerText = this.#todo;
-      containerList.append(task);
-      task.append(deleteButton);
+      containerList.prepend(task);
+      this.#task.innerText = this.#todo;
+      this.#task.append(deleteButton);
+      this.#task.prepend(checkbox);
     }
     deleteButton.addEventListener("click", (e) => this.deleteTask(e));
+    checkbox.addEventListener("change", (e) => this.toggleCheck());
   }
 
   deleteTask(e) {
     e.preventDefault();
     e.currentTarget.parentNode.remove();
+  }
+  toggleCheck() {
+    this.#task.classList.toggle("checked");
   }
 }
